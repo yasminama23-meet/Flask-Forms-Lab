@@ -12,14 +12,14 @@
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
 <ul id="myUL">
-  <li><a href="{{url_for('facebook_friends',name='adele')}}">adele</a></li>
-  <li><a href="{{url_for('facebook_friends',name='agnes')}}">Agnes</a></li>
-  <li><a href="{{url_for('facebook_friends',name='billy')}}">Billy</a></li>
-  <li><a href="{{url_for('facebook_friends',name='bob')}}">Bob</a></li>
-  <li><a href="{{url_for('facebook_friends',name='calvin')}}">Calvin</a></li>
-  <li><a href="{{url_for('facebook_friends',name='christina')}}">Christina</a></li>
-  <li><a href="{{url_for('facebook_friends',name='cindy')}}">Cindy</a></li>
-  <li><a href="{{url_for('facebook_friends',name='loai')}}">Loai</a></li>
+  <li><a href="{{url_for('hello_name_route',name='adele')}}">adele</a></li>
+  <li><a href="{{url_for('hello_name_route',name='agnes')}}">Agnes</a></li>
+  <li><a href="{{url_for('hello_name_route',name='billy')}}">Billy</a></li>
+  <li><a href="{{url_for('hello_name_route',name='bob')}}">Bob</a></li>
+  <li><a href="{{url_for('hello_name_route',name='calvin')}}">Calvin</a></li>
+  <li><a href="{{url_for('hello_name_route',name='christina')}}">Christina</a></li>
+  <li><a href="{{url_for('hello_name_route',name='cindy')}}">Cindy</a></li>
+  <li><a href="{{url_for('hello_name_route',name='loai')}}">Loai</a></li>
 </ul>
 
 <script>
@@ -42,9 +42,9 @@ function myFunction() {
 </script>
 
 
-    ul>
+    <ul>
        {% for friend in facebook_friends %}
-            <li> {{friend,name=facebook_friends}} </li>
+            <li> {{friend}} </li>
             {% endfor %}
             </ul>
 
