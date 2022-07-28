@@ -12,7 +12,7 @@ password = "12345"
 facebook_friends=["leen","bean","finly", "frankly", "giries", "jamal"]
 
 
-@app.route('/')  # '/' for the default page
+@app.route('/',methods=['GET', 'POST'])  # '/' for the default page
 def login():
 	if request.method == 'POST':
 
@@ -35,6 +35,11 @@ def Home():
 
 
 
+@app.route('/friends_exists/<string:name>',methods=['GET', 'POST'])
+def hello_name_route(name):
+    return render_template(
+        'friend_exists.html', n = friend)
+   
 
 
 

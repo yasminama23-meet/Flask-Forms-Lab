@@ -12,14 +12,14 @@
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
 <ul id="myUL">
-  <li><a href="#">Adele</a></li>
-  <li><a href="#">Agnes</a></li>
-  <li><a href="#">Billy</a></li>
-  <li><a href="#">Bob</a></li>
-  <li><a href="#">Calvin</a></li>
-  <li><a href="#">Christina</a></li>
-  <li><a href="#">Cindy</a></li>
-  <li><a href="#">Loai</a></li>
+  <li><a href="{{url_for('facebook_friends',name='adele')}}">adele</a></li>
+  <li><a href="{{url_for('facebook_friends',name='agnes')}}">Agnes</a></li>
+  <li><a href="{{url_for('facebook_friends',name='billy')}}">Billy</a></li>
+  <li><a href="{{url_for('facebook_friends',name='bob')}}">Bob</a></li>
+  <li><a href="{{url_for('facebook_friends',name='calvin')}}">Calvin</a></li>
+  <li><a href="{{url_for('facebook_friends',name='christina')}}">Christina</a></li>
+  <li><a href="{{url_for('facebook_friends',name='cindy')}}">Cindy</a></li>
+  <li><a href="{{url_for('facebook_friends',name='loai')}}">Loai</a></li>
 </ul>
 
 <script>
@@ -44,7 +44,7 @@ function myFunction() {
 
     ul>
        {% for friend in facebook_friends %}
-            <li> {{friend}} </li>
+            <li> {{friend,name=facebook_friends}} </li>
             {% endfor %}
             </ul>
 
